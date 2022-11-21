@@ -1,5 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 
+
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="robbyrussell"
 
@@ -18,7 +19,7 @@ unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 unalias lt # we need `lt` for https://github.com/localtunnel/localtunnel
 
 # Load rbenv if installed (to manage your Ruby versions)
-export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
+export PYTHONPATH="/Users/someone/code/TugaMedia/data-context-and-setup:$PYTHONPATH" # Needed for Linux/WSL
 type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
 # Load pyenv (to manage your Python versions)
@@ -70,3 +71,10 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi
+export GOOGLE_APPLICATION_CREDENTIALS=/Users/someone/Documents/python/keys/sixth-backbone-365116-0df3af93c30f.json
